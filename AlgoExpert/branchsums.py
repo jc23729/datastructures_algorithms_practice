@@ -13,3 +13,12 @@
 #     (4) (5) (6) (7)
 #   (8)(9) (10)
 
+# Sample output = [15, 16, 18, 10, 11]
+
+class BinaryTree:
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
+
+
