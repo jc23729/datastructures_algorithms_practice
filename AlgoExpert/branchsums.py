@@ -34,9 +34,48 @@ class BinaryTree:
 
 
 def branchSum(root):
+    # decalre a running sum list
     sums = []
     # our actual function
-    calculateBranchSum(root, 0, sums)
+    # so we start with the root node and initialize it to zero because we have no running sum
+    # then we declare a list, sums append values to this list
+    def calculateBranchSums(root, 0, sums)
     return sums
+    # our actual recursive function
+    def calcualteBranchSum(node, runningSum, sums):
+    if node == None:
+        return
+    # so we have our running sum, and we append it with the new node 
+    newRunningSum = runningSum + node.value
+    if node.left is None and node.right is None:
+        sums.append(newRunningSum)
+        return
 
-def calcualteBranchSum(root, runningSum, sums):
+    calculateBranchSums(node.left, newRunningSum, sums)
+    calculateBranchSums(node.right, newRunningSum, sums)
+
+
+
+# class BinaryTree:
+#     def __init__(self, value):
+#         self.value = value
+#         self.left = None
+#         self.right = None
+
+# def branchSum(root):
+
+#     sums = []
+#     calculateBranchSums(root, 0, sums)
+#     return sums
+
+# def calcualteBranchSums(node, runningSum, sums):
+#     if node is None:
+#         return
+    
+#     newRunningSum = runningSum + node.value
+#     if node.left is None and node.right is None:
+#         sums.append(newRunningSum)
+#         return
+
+#     calculateBranchSums(node.left, newRunningSum, sums)
+#     calculateBranchSums(node.right, newRunningSum, sums)
