@@ -47,6 +47,8 @@ def branchSum(root):
         return
     # so we have our running sum, and we append it with the new node 
     newRunningSum = runningSum + node.value
+    # if our node is a leaf node lets add this new running sum to ours sums list
+    # we determine if its a leaf node if there is no chile nodes to the left or right
     if node.left is None and node.right is None:
         sums.append(newRunningSum)
         return
