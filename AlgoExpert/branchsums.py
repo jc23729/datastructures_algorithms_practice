@@ -22,3 +22,6 @@ class BinaryTree:
         self.right = None
 
 
+def branchSum(root):
+
+
