@@ -21,7 +21,22 @@ class BinaryTree:
         self.left = None
         self.right = None
 
+# were going to try to solve this recursively...
+# we are going to be passing the running sum, which is the sum of all the sums above its
+# also we want to be have a running list
+
+
+# def branchSum(root):
+#     if root == None:
+#         return []
+#     else:
+#         return branchSum(root.left) + [root.value] + branchSum(root.right)
+
 
 def branchSum(root):
+    sums = []
+    # our actual function
+    calculateBranchSum(root, 0, sums)
+    return sums
 
-
+def calcualteBranchSum(root, runningSum, sums):
