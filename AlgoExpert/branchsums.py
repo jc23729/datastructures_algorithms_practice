@@ -32,6 +32,7 @@ class BinaryTree:
 #     else:
 #         return branchSum(root.left) + [root.value] + branchSum(root.right)
 
+# O(n) time   complexity   O(n) space complexity
 
 def branchSum(root):
     # decalre a running sum list
@@ -39,12 +40,15 @@ def branchSum(root):
     # our actual function
     # so we start with the root node and initialize it to zero because we have no running sum
     # then we declare a list, sums append values to this list
-    def calculateBranchSums(root, 0, sums)
+    calculateBranchSums(root, 0, sums)
     return sums
+
     # our actual recursive function
     def calcualteBranchSum(node, runningSum, sums):
-    if node == None:
+    # handles our edge case of a null node meaning there is no running sum
+    if node is None:
         return
+    
     # so we have our running sum, and we append it with the new node 
     newRunningSum = runningSum + node.value
     # if we are at a leaf node. If we're at a leaf  node lets add this new running sum to ours sums list
