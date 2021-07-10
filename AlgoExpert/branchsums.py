@@ -47,12 +47,13 @@ def branchSum(root):
         return
     # so we have our running sum, and we append it with the new node 
     newRunningSum = runningSum + node.value
-    # if our node is a leaf node lets add this new running sum to ours sums list
+    # if we are at a leaf node. If we're at a leaf  node lets add this new running sum to ours sums list
     # we determine if its a leaf node if there is no chile nodes to the left or right
     if node.left is None and node.right is None:
+        # we apppend our sums which is our last or leaf node and append it with the new running sum
         sums.append(newRunningSum)
         return
-
+    # if are not at a leaf node, we want to call the funciton again with the left and right children
     calculateBranchSums(node.left, newRunningSum, sums)
     calculateBranchSums(node.right, newRunningSum, sums)
 
